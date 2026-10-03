@@ -1059,7 +1059,7 @@
       ]
     },
     {
-      "description": "Win+S: search (Spotlight) \u2014 overrides Cmd+S save; use Ctrl+S to save",
+      "description": "Win+S: switch input source (needs 2+ input sources enabled)",
       "manipulators": [
         {
           "type": "basic",
@@ -1076,7 +1076,10 @@
           },
           "to": [
             {
-              "apple_vendor_keyboard_key_code": "spotlight"
+              "key_code": "spacebar",
+              "modifiers": [
+                "left_control"
+              ]
             }
           ],
           "conditions": [
@@ -1097,7 +1100,7 @@
       ]
     },
     {
-      "description": "Win+Space: switch input source (needs 2+ input sources enabled)",
+      "description": "Win+Space: search (Spotlight) \u2014 overrides Cmd+Space; use Ctrl+S to save",
       "manipulators": [
         {
           "type": "basic",
@@ -1114,10 +1117,7 @@
           },
           "to": [
             {
-              "key_code": "spacebar",
-              "modifiers": [
-                "left_control"
-              ]
+              "apple_vendor_keyboard_key_code": "spotlight"
             }
           ],
           "conditions": [
