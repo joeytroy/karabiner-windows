@@ -148,11 +148,11 @@ rules.append(rule("Win+I: open Settings (System Settings)", [
 rules.append(rule("Win+Shift+S: snip region to clipboard", [
     m(frm("s", ["command", "shift"]), key("4", ["left_command", "left_shift", "left_control"]), COND_GUI),
 ]))
-rules.append(rule("Win+S: search (Spotlight) — overrides Cmd+S save; use Ctrl+S to save", [
-    m(frm("s", ["command"]), {"apple_vendor_keyboard_key_code": "spotlight"}, COND_GUI),
+rules.append(rule("Win+S: switch input source (needs 2+ input sources enabled)", [
+    m(frm("s", ["command"]), key("spacebar", ["left_control"]), COND_GUI),
 ]))
-rules.append(rule("Win+Space: switch input source (needs 2+ input sources enabled)", [
-    m(frm("spacebar", ["command"]), key("spacebar", ["left_control"]), COND_GUI),
+rules.append(rule("Win+Space: search (Spotlight) — overrides Cmd+Space; use Ctrl+S to save", [
+    m(frm("spacebar", ["command"]), {"apple_vendor_keyboard_key_code": "spotlight"}, COND_GUI),
 ]))
 rules.append(rule("Win+. (period): emoji picker", [
     m(frm("period", ["command"]), key("spacebar", ["left_control", "left_command"]), COND_GUI),
